@@ -21,7 +21,7 @@ public class TodoService {
     }
 
 
-    public void saveTodo(SaveTodoCommand command) {
-        todoRepository.saveTodo(command);
+    public Todo saveTodo(SaveTodoCommand command) {
+        return todoRepository.saveTodo(command);
     }
 }

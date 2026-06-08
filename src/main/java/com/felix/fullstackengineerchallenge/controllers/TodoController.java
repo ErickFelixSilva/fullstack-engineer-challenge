@@ -25,7 +25,7 @@ public class TodoController {
     }
 
     @PostMapping("/todos")
-    public void saveTodo(@RequestBody SaveTodoCommand command) {
-        return todoService.saveTodo();
+    public Todo saveTodo(@RequestBody SaveTodoCommand command) {
+        return todoService.saveTodo(command);
     }
 }
