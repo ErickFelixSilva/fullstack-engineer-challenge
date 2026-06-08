@@ -1,3 +1,5 @@
 package com.felix.fullstackengineerchallenge.domain;
 
-public record SaveTodoCommand(String text) {}
+import jakarta.validation.constraints.NotEmpty;
+
+public record SaveTodoCommand(@NotEmpty String text) {}

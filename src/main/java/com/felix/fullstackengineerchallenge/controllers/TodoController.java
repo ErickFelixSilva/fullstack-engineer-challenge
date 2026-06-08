@@ -3,6 +3,7 @@ package com.felix.fullstackengineerchallenge.controllers;
 import com.felix.fullstackengineerchallenge.domain.SaveTodoCommand;
 import com.felix.fullstackengineerchallenge.domain.Todo;
 import com.felix.fullstackengineerchallenge.service.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class TodoController {
     }
 
     @PostMapping("/todos")
-    public Todo saveTodo(@RequestBody SaveTodoCommand command) {
+    public Todo saveTodo(@RequestBody @Valid SaveTodoCommand command) {
         return todoService.saveTodo(command);
     }
 }
