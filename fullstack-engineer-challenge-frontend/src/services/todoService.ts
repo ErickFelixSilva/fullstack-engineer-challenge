@@ -11,6 +11,6 @@ export const getTodos = async () => {
 };
 
 export const createTodo = async (todo: string) => {
-  const response = await api.post('/todos', { todo });
+  const response = await api.post('/todos', { text: todo });
   return response.data;
 };
